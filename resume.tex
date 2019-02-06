@@ -1,0 +1,267 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={Résumé},
+            pdfauthor={William Findlay},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{Résumé}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{William Findlay}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{\today}
+
+\usepackage{float}
+\usepackage{titling}
+\usepackage{listings}
+\usepackage[hang,bf]{caption}
+\usepackage{changepage}
+\usepackage{amsmath, amsfonts,amssymb, amsthm}
+\usepackage{siunitx}
+\usepackage{setspace}
+\usepackage[boxruled,lined,linesnumbered,titlenumbered]{algorithm2e}
+\floatplacement{figure}{H}
+\floatplacement{table}{H}
+\usepackage{titlesec}
+
+\usepackage{afterpage}
+\hypersetup{colorlinks, allcolors=., urlcolor=blue}
+
+\titleformat{\section}
+{\Large\bfseries}
+{}
+{0em}
+{}[\titlerule]
+
+\titleformat{\subsection}
+{\bfseries\large}
+{}
+{0em}
+{}
+
+\titleformat{\subsubsection}[runin]
+{\bfseries}
+{}
+{0em}
+{}[ ---]
+
+\titlespacing{\section}
+{-0.3in}{0.5em}{0.5em}
+
+\titlespacing{\subsection}
+{-0.1in}{0em}{0em}
+
+\titlespacing{\subsubsection}
+{1em}{0em}{0.5em}
+
+\renewcommand{\maketitle}{
+\begin{center}
+{\Huge\bfseries
+\theauthor}
+\vspace{-.5em}
+
+\href{https://www.github.com/housedhorse}{github.com/housedhorse} --- \href{http://www.wfindlay.com}{wfindlay.com}\\
+(613) 296-1240 --- \href{mailto:william@wfindlay.com}{william@wfindlay.com}
+
+\end{center}
+}
+
+\newgeometry{left=0.9in,top=0.6in,bottom=0.6in,right=0.6in}
+
+\begin{document}
+\maketitle
+
+\renewcommand{\indent}{\hspace*{0.3in}\ignorespaces}
+\setlength{\captionmargin}{1in}
+\lstset{mathescape=true,numbers=left,breaklines=true,frame=single,language=C}
+\thispagestyle{empty}
+
+\hypertarget{education}{%
+\section{Education}\label{education}}
+
+\textbf{Carleton University}
+\hfill\hfill \emph{September 2015 - Present}\\
+B.Sc.~in Computer Science, Honors\\
+Software Engineering Stream\\
+CGPA: 11.0 (A)
+
+\hypertarget{work-experience}{%
+\section{Work Experience}\label{work-experience}}
+
+\textbf{Carleton University}
+\hfill\hfill \emph{September 2018 - Present}\\
+\emph{Teaching Assistant (COMP3000: Operating Systems)}
+\hfill\hfill \emph{Ottawa, ON}
+
+\begin{itemize}
+\tightlist
+\item
+  Ran tutorial sessions for groups of 50 students.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Took a leadership role to ensure tutorials proceeded smoothly.
+  \end{itemize}
+\item
+  Held weekly office hours and workshops for students.
+\item
+  Graded assignments and tests and gave appropriate feedback.
+\item
+  Proctored exams for about 200 students.
+\item
+  Assisted professor with development and delivery of course material.
+\end{itemize}
+
+\textbf{Hilltops Real Estate Group}
+\hfill\hfill \emph{May 2018 - September 2018}\\
+\emph{Developer} \hfill\hfill \emph{(Remotely) Dallas, TX}
+
+\begin{itemize}
+\tightlist
+\item
+  Developed website for a startup student housing company.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Led a small team of developers working on full stack development of
+    a business website.
+  \end{itemize}
+\end{itemize}
+
+\textbf{Metro Ontario, Inc.}
+\hfill\hfill \emph{April 2014 - January 2018}\\
+\emph{Service Dept.~Supervisor} \hfill\hfill \emph{Ottawa, ON}
+
+\begin{itemize}
+\tightlist
+\item
+  Managed day-to-day operations in the front end service department.
+\item
+  Exhibited superior customer service skills as required.
+\end{itemize}
+
+\hypertarget{technical-skills}{%
+\section{Technical Skills}\label{technical-skills}}
+
+\begin{tabular}{l c l}
+  {\hspace{-1.5em} \bfseries \large Languages} &&\\
+  \bfseries
+  Programming   &--& C, C++, R, Java, Python, Javascript, Scheme, Haskell, Prolog\\
+  \bfseries
+  Markup        &--& Markdown, Rmarkdown, \LaTeX, HTML, CSS\\
+  \bfseries
+  Human         &--& English, French\vspace{0.5em}\\
+  {\hspace{-1.5em} \bfseries \large APIs and Libraries} &&\\
+  \bfseries
+  C++           &--& Qt\\
+  \bfseries
+  Javascript    &--& Node.js, Jquery\vspace{0.5em}\\
+  {\hspace{-1.5em} \bfseries \large Workflow} &&\\
+  \bfseries
+  Operating System    &--& GNU/Linux (Arch Linux)\\
+  \bfseries
+  Desktop Environment &--& i3wm\\
+  \bfseries
+  Text Editor         &--& Vim\\
+  \bfseries
+  Version Management  &--& Git, GitHub
+\end{tabular}
+
+\hypertarget{general-skills}{%
+\section{General Skills}\label{general-skills}}
+
+\begin{itemize}
+\tightlist
+\item
+  Bilingual
+\item
+  Dedicated
+\item
+  Goal-oriented
+\item
+  Team leader
+\end{itemize}
+
+\hypertarget{extracurricular-activities}{%
+\section{Extracurricular Activities}\label{extracurricular-activities}}
+
+\begin{itemize}
+\tightlist
+\item
+  Linux nerd and free software enthusiast
+\item
+  Computer builder
+\item
+  Study group leader for friends and peers
+\item
+  Former Grandmaster Starcraft II player
+\end{itemize}
+
+
+\end{document}

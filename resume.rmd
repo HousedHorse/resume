@@ -1,0 +1,150 @@
+
+---
+author: 
+- William Findlay
+title: R&eacute;sum&eacute; 
+date: \today
+bibliography: /home/housedhorse/.bibs/uni.bib
+csl: /home/housedhorse/.bibs/ieee.csl
+subparagraph: yes
+header-includes: |
+  ``` {=latex}
+  \usepackage{float}
+  \usepackage{titling}
+  \usepackage{listings}
+  \usepackage[hang,bf]{caption}
+  \usepackage{changepage}
+  \usepackage{amsmath, amsfonts,amssymb, amsthm}
+  \usepackage{siunitx}
+  \usepackage{setspace}
+  \usepackage[boxruled,lined,linesnumbered,titlenumbered]{algorithm2e}
+  \floatplacement{figure}{H}
+  \floatplacement{table}{H}
+  \usepackage{titlesec}
+
+  \usepackage{afterpage}
+  \hypersetup{colorlinks, allcolors=., urlcolor=blue}
+
+  \titleformat{\section}
+  {\Large\bfseries}
+  {}
+  {0em}
+  {}[\titlerule]
+
+  \titleformat{\subsection}
+  {\bfseries\large}
+  {}
+  {0em}
+  {}
+
+  \titleformat{\subsubsection}[runin]
+  {\bfseries}
+  {}
+  {0em}
+  {}[ ---]
+
+  \titlespacing{\section}
+  {-0.3in}{0.5em}{0.5em}
+
+  \titlespacing{\subsection}
+  {-0.1in}{0em}{0em}
+
+  \titlespacing{\subsubsection}
+  {1em}{0em}{0.5em}
+
+  \renewcommand{\maketitle}{
+  \begin{center}
+  {\Huge\bfseries
+  \theauthor}
+  \vspace{-.5em}
+  
+  \href{https://www.github.com/housedhorse}{github.com/housedhorse} --- \href{http://www.wfindlay.com}{wfindlay.com}\\
+  (613) 296-1240 --- \href{mailto:william@wfindlay.com}{william@wfindlay.com}
+  
+  \end{center}
+  }
+
+  \newgeometry{left=0.9in,top=0.6in,bottom=0.6in,right=0.6in}
+  ```
+output:
+  pdf_document:
+    number_sections: true
+    fig_crop: true
+    fig_caption: true
+    keep_tex: true
+---
+\renewcommand{\indent}{\hspace*{0.3in}\ignorespaces}
+\setlength{\captionmargin}{1in}
+\lstset{mathescape=true,numbers=left,breaklines=true,frame=single,language=C}
+\thispagestyle{empty}
+
+# Education
+
+**Carleton University** \hfill\hfill \emph{September 2015 - Present}\
+B.Sc.\ in Computer Science, Honors\
+Software Engineering Stream\
+CGPA: 11.0 (A)
+
+# Work Experience
+
+**Carleton University** \hfill\hfill \emph{September 2018 - Present}\
+*Teaching Assistant (COMP3000: Operating Systems)* \hfill\hfill \emph{Ottawa, ON}
+
+- Ran tutorial sessions for groups of 50 students.
+  - Took a leadership role to ensure tutorials proceeded smoothly.
+- Held weekly office hours and workshops for students.
+- Graded assignments and tests and gave appropriate feedback.
+- Proctored exams for about 200 students.
+- Assisted professor with development and delivery of course material.
+
+**Hilltops Real Estate Group** \hfill\hfill \emph{May 2018 - September 2018}\
+*Developer* \hfill\hfill \emph{(Remotely) Dallas, TX}
+
+- Developed website for a startup student housing company.
+  - Led a small team of developers working on full stack development of a business website.
+
+**Metro Ontario, Inc.** \hfill\hfill \emph{April 2014 - January 2018}\
+*Service Dept.\ Supervisor* \hfill\hfill \emph{Ottawa, ON}
+
+- Managed day-to-day operations in the front end service department.
+- Exhibited superior customer service skills as required.
+
+# Technical Skills
+
+\begin{tabular}{l c l}
+  {\hspace{-1.5em} \bfseries \large Languages} &&\\
+  \bfseries
+  Programming   &--& C, C++, R, Java, Python, Javascript, Scheme, Haskell, Prolog\\
+  \bfseries
+  Markup        &--& Markdown, Rmarkdown, \LaTeX, HTML, CSS\\
+  \bfseries
+  Human         &--& English, French\vspace{0.5em}\\
+  {\hspace{-1.5em} \bfseries \large APIs and Libraries} &&\\
+  \bfseries
+  C++           &--& Qt\\
+  \bfseries
+  Javascript    &--& Node.js, Jquery\vspace{0.5em}\\
+  {\hspace{-1.5em} \bfseries \large Workflow} &&\\
+  \bfseries
+  Operating System    &--& GNU/Linux (Arch Linux)\\
+  \bfseries
+  Desktop Environment &--& i3wm\\
+  \bfseries
+  Text Editor         &--& Vim\\
+  \bfseries
+  Version Management  &--& Git, GitHub
+\end{tabular}
+
+# General Skills
+
+- Bilingual
+- Dedicated
+- Goal-oriented
+- Team leader
+
+# Extracurricular Activities
+
+- Linux nerd and free software enthusiast
+- Computer builder
+- Study group leader for friends and peers
+- Former Grandmaster Starcraft II player
