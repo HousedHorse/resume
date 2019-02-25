@@ -76,192 +76,426 @@
     \date{\today}
 
 \usepackage{float}
-\usepackage{titling}
 \usepackage{listings}
 \usepackage[hang,bf]{caption}
-\usepackage{changepage}
+\usepackage{framed}
+\usepackage[section]{placeins}
+
+\usepackage[dvipsnames,table]{xcolor}
+
+\definecolor{gray}{HTML}{606060}
+\definecolor{black}{HTML}{000000}
+
+\usepackage{pifont}
+
+\allowdisplaybreaks
+
+\usepackage[bottom]{footmisc}
+% fancy headers/footers
+\makeatletter
+\usepackage{fancyhdr}
+\lhead{}
+\chead{}
+\rhead{\color{gray}Last Updated: \today}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0pt}
+
 \usepackage{amsmath, amsfonts,amssymb, amsthm}
 \usepackage{siunitx}
-\usepackage{setspace}
 \usepackage[boxruled,lined,linesnumbered,titlenumbered]{algorithm2e}
-\floatplacement{figure}{H}
-\floatplacement{table}{H}
-\usepackage{titlesec}
 
+\usepackage{setspace}
+\usepackage{changepage}
+\usepackage[explicit]{titlesec}
+\usepackage{aliascnt}
+
+\floatplacement{figure}{!htbp}
+\floatplacement{table}{!htbp}
+\lstset{numbers=left,breaklines=true,frame=single,language=Python,captionpos=t,abovecaptionskip={\abovecaptionskip},
+belowcaptionskip={0.5em},aboveskip=\intextsep,showstringspaces=false,identifierstyle=\color{Blue},
+commentstyle={\color{OliveGreen}},keywordstyle={\bfseries\color{Orange}},stringstyle=\color{Purple},mathescape=true}
+\setlength{\captionmargin}{1in}
+
+\newgeometry{left=0.6in,top=.8in,bottom=.8in,right=0.6in}
+
+\newtheoremstyle{plain}
+{12pt}   % ABOVESPACE
+{12pt}   % BELOWSPACE
+{\itshape}  % BODYFONT
+{0pt}       % INDENT (empty value is the same as 0pt)
+{\bfseries} % HEADFONT
+{.}         % HEADPUNCT
+{5pt plus 1pt minus 1pt} % HEADSPACE
+{}          % CUSTOM-HEAD-SPEC
+
+\newtheoremstyle{definition}
+{12pt}   % ABOVESPACE
+{12pt}   % BELOWSPACE
+{\normalfont}  % BODYFONT
+{0pt}       % INDENT (empty value is the same as 0pt)
+{\bfseries} % HEADFONT
+{.}         % HEADPUNCT
+{5pt plus 1pt minus 1pt} % HEADSPACE
+{}          % CUSTOM-HEAD-SPEC
+
+\newtheoremstyle{remark}
+{12pt}   % ABOVESPACE
+{12pt}   % BELOWSPACE
+{\normalfont}  % BODYFONT
+{0pt}       % INDENT (empty value is the same as 0pt)
+{\itshape} % HEADFONT
+{.}         % HEADPUNCT
+{5pt plus 1pt minus 1pt} % HEADSPACE
+{}          % CUSTOM-HEAD-SPEC
+
+\theoremstyle{plain}
+
+% define theorem
+\newtheorem{theorem}{Theorem}[section]
+\providecommand*{\theoremautorefname}{Theorem}
+
+% define lemma
+\newtheorem{lemma}{Lemma}[section]
+\providecommand*{\lemmaautorefname}{Lemma}
+
+% define claim
+\newtheorem{claim}{Claim}[section]
+\providecommand*{\claimautorefname}{Claim}
+
+% define corollary
+\newtheorem{corollary}{Corollary}[section]
+\providecommand*{\corollaryautorefname}{Corollary}
+
+% define proposition
+\newtheorem{proposition}{Proposition}[section]
+\providecommand*{\propositionautorefname}{Proposition}
+
+% define conjecture
+\newtheorem{conjecture}{Conjecture}[section]
+\providecommand*{\conjectureautorefname}{Conjecture}
+
+\theoremstyle{remark}
+
+% define observation
+\newtheorem{observation}{Observation}[section]
+\providecommand*{\observationautorefname}{Observation}
+
+% define remark
+\newtheorem{remark}{Remark}[section]
+\providecommand*{\remarkautorefname}{Remark}
+
+\theoremstyle{definition}
+
+% define example
+\newtheorem{example}{Example}[section]
+\providecommand*{\exampleautorefname}{Example}
+
+% define definition
+\newtheorem{definition}{Definition}[section]
+\providecommand*{\definitionautorefname}{Definition}
+
+\newcommand{\blackbox}{\hfill$\blacksquare$}
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{\ding{226}}
+\renewcommand{\labelitemiii}{\tiny$\blacksquare$}
+\renewcommand{\labelitemiv}{\small$\triangleright$}
+
+\titleformat{\paragraph} % command to change
+[runin]                  % shape  (runin, etc.)
+{\bfseries}              % format (bfseries, itshape, etc.)
+{}                       % label  (thesection, thesubsection, etc.)
+{0em}                    % separation between label and body
+{#1}        % before the body
+[.]                       % after the body
+
+\titleformat{\subparagraph} % command to change
+[runin]                  % shape  (runin, etc.)
+{\itshape}              % format (bfseries, itshape, etc.)
+{}                       % label  (thesection, thesubsection, etc.)
+{0em}                    % separation between label and body
+{#1}        % before the body
+[.]                       % after the body
+
+\let\lil\lstinputlisting
 \usepackage{afterpage}
 \hypersetup{colorlinks, allcolors=., urlcolor=blue}
 
+\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+\makeatletter
+\patchcmd{\lst@GLI@}% <command>
+  {\def\lst@firstline{#1\relax}}% <search>
+  {\def\lst@firstline{#1\relax}\def\lst@firstnumber{#1\relax}}% <replace>
+  {\typeout{listings firstnumber=firstline}}% <success>
+  {\typeout{listings firstnumber not set}}% <failure>
+\makeatother
+
+\renewcommand\lstlistlistingname{List of Listings}
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\pagestyle{fancy}
+
+\renewcommand{\sectionautorefname}{Section}
+\renewcommand{\subsectionautorefname}{Subection}
+\renewcommand{\subsubsectionautorefname}{Subection}
+\renewcommand{\paragraphautorefname}{}
+\renewcommand{\subparagraphautorefname}{}
+
+\usepackage{nameref}
+
+\makeatletter
+\renewcommand{\theparagraph}{\bfseries \@currentlabelname}
+\renewcommand{\thesubparagraph}{\itshape \@currentlabelname}
+\makeatother
+
+\definecolor{purple}{HTML}{400080}
+
 \titleformat{\section}
-{\Large\bfseries}
+{\color{black}\Large\scshape}
 {}
 {0em}
-{}[\titlerule]
+{#1}[{\color{gray}\hrule}]
 
 \titleformat{\subsection}
-{\bfseries\large}
+{\color{black}\bfseries}
 {}
 {0em}
-{}
+{#1}
 
-\titleformat{\subsubsection}[runin]
-{\bfseries}
+\titleformat{\subsubsection}
+{\color{black}}
 {}
 {0em}
-{}[ ---]
+{#1}[]
 
 \titlespacing{\section}
-{-0.3in}{0.5em}{0.5em}
+{0em}{1em}{0.5em}
 
 \titlespacing{\subsection}
-{-0.1in}{0em}{0em}
+{0em}{0.5em}{0em}
 
 \titlespacing{\subsubsection}
-{1em}{0em}{0.5em}
+{0em}{0.5em}{0em}
 
-\renewcommand{\maketitle}{
-\begin{center}
-{\Huge\bfseries
-\theauthor}
-\vspace{-.5em}
+\renewcommand{\maketitle}{\relax}
 
-\href{https://www.github.com/housedhorse}{github.com/housedhorse} --- \href{http://www.wfindlay.com}{wfindlay.com}\\
-(613) 296-1240 --- \href{mailto:william@wfindlay.com}{william@wfindlay.com}
+\usepackage{enumitem}
+\setitemize{itemsep=0em}
 
-\end{center}
+\newcommand{\sep}{
+  {\color{black}$\bullet$}
 }
-
-\newgeometry{left=0.9in,top=0.6in,bottom=0.6in,right=0.6in}
 
 \begin{document}
 \maketitle
 
-\renewcommand{\indent}{\hspace*{0.3in}\ignorespaces}
-\setlength{\captionmargin}{1in}
-\lstset{mathescape=true,numbers=left,breaklines=true,frame=single,language=C}
-\thispagestyle{empty}
+\begin{figure}
+\small
+\begin{minipage}[t]{0.65\textwidth}
+\begin{center}
+{\Huge\bfseries {\color{gray}William} Findlay}
 
-\hypertarget{education}{%
-\section{Education}\label{education}}
+\color{gray}
 
-\textbf{Carleton University}
-\hfill\hfill \emph{September 2015 - Present}\\
-B.Sc.~in Computer Science, Honors\\
+\href{https://www.github.com/housedhorse}{\color{gray}github.com/housedhorse} $\bullet$ \href{http://www.wfindlay.com}{\color{gray}wfindlay.com}\\
+{\color{gray}(613) 296-1240} $\bullet$ \href{mailto:william@wfindlay.com}{\color{gray}william@wfindlay.com}
+\end{center}
+
+\color{gray}
+
+\section{Education}
+\color{black}
+\textbf{Bachelor of Computer Science} \hfill \emph{Carleton University}\\
+{September 2015 - April 2020} \hfill\emph {Ottawa, ON}
+\color{gray}
+
 Software Engineering Stream\\
 CGPA: 11.0 (A)
 
-\hypertarget{work-experience}{%
-\section{Work Experience}\label{work-experience}}
 
-\textbf{Carleton University}
-\hfill\hfill \emph{September 2018 - Present}\\
-\emph{Teaching Assistant (COMP3000: Operating Systems)}
-\hfill\hfill \emph{Ottawa, ON}
+\section{Work Experience}
 
-\begin{itemize}
-\tightlist
-\item
-  Ran tutorial sessions for groups of 50 students.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Took a leadership role to ensure tutorials proceeded smoothly.
-  \end{itemize}
-\item
-  Held weekly office hours and workshops for students.
-\item
-  Graded assignments and tests and gave appropriate feedback.
-\item
-  Proctored exams for about 200 students.
-\item
-  Assisted professor with development and delivery of course material.
+\color{black}
+\textbf{Teaching Assistant} (COMP3000 Operating Systems) \hfill \emph{Carleton University}\\
+September 2018 - Present \hfill\emph {Ottawa, ON}
+\color{gray}
+\begin{itemize}[itemsep=0em]
+\item Ran tutorial sessions for groups of 50 students.
+\item Took a leadership role to ensure tutorials proceeded smoothly.
+\item Held weekly office hours and workshops for students.
+\item Graded assignments and tests and gave appropriate feedback.
+\item Proctored exams for about 200 students.
+\item Assisted professor with development and delivery of course material.
 \end{itemize}
 
-\textbf{Hilltops Real Estate Group}
-\hfill\hfill \emph{May 2018 - September 2018}\\
-\emph{Developer} \hfill\hfill \emph{(Remotely) Dallas, TX}
-
-\begin{itemize}
-\tightlist
-\item
-  Developed website for a startup student housing company.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Led a small team of developers working on full stack development of
-    a business website.
-  \end{itemize}
+\color{black}
+\textbf{Full Stack Developer} \hfill \emph{Hilltops Real Estate Group}\\
+May 2018 - September 2018 \hfill\emph {(Remotely) Dallas, TX}
+\color{gray}
+\begin{itemize}[itemsep=0em]
+\item Developed website for a startup student housing company.
+\item Led a small team of developers working on full stack development of a business website.
 \end{itemize}
 
-\textbf{Metro Ontario, Inc.}
-\hfill\hfill \emph{April 2014 - January 2018}\\
-\emph{Service Dept.~Supervisor} \hfill\hfill \emph{Ottawa, ON}
-
-\begin{itemize}
-\tightlist
-\item
-  Managed day-to-day operations in the front end service department.
-\item
-  Exhibited superior customer service skills as required.
+\color{black}
+\textbf{Service Department Supervisor} \hfill \emph{Metro Ontario, Inc.}\\
+April 2014 - January 2018 \hfill\emph {Ottawa, ON}
+\color{gray}
+\begin{itemize}[itemsep=0em]
+\item Managed day-to-day operations in the front end service department.
+\item Exhibited superior customer service skills as required.
 \end{itemize}
 
-\hypertarget{technical-skills}{%
-\section{Technical Skills}\label{technical-skills}}
 
-\begin{tabular}{l c l}
-  {\hspace{-1.5em} \bfseries \large Languages} &&\\
-  \bfseries
-  Programming   &--& C, C++, R, Java, Python, Javascript, Scheme, Haskell, Prolog\\
-  \bfseries
-  Markup        &--& Markdown, Rmarkdown, \LaTeX, HTML, CSS\\
-  \bfseries
-  Human         &--& English, French\vspace{0.5em}\\
-  {\hspace{-1.5em} \bfseries \large APIs and Libraries} &&\\
-  \bfseries
-  C++           &--& Qt\\
-  \bfseries
-  Javascript    &--& Node.js, Jquery\vspace{0.5em}\\
-  {\hspace{-1.5em} \bfseries \large Workflow} &&\\
-  \bfseries
-  Operating System    &--& GNU/Linux (Arch Linux)\\
-  \bfseries
-  Desktop Environment &--& i3wm\\
-  \bfseries
-  Text Editor         &--& Vim\\
-  \bfseries
-  Version Management  &--& Git, GitHub
-\end{tabular}
+%\section{Technical Skills}
+%
+%\begin{tabular}{l c l}
+%  {\bfseries \large Languages} &&\\
+%  \bfseries
+%  Programming   &--& C, C++, R, Java, Python, Javascript, Scheme,\\ &&Haskell, Prolog\\
+%  \bfseries
+%  Markup        &--& Markdown, Rmarkdown, \LaTeX, HTML, CSS\\
+%  \bfseries
+%  Human         &--& English, French\vspace{0.5em}\\
+%  {\bfseries \large APIs and Libraries} &&\\
+%  \bfseries
+%  C++           &--& Qt\\
+%  \bfseries
+%  Javascript    &--& Node.js, Jquery\vspace{0.5em}\\
+%  {\bfseries \large Workflow} &&\\
+%  \bfseries
+%  Operating System    &--& GNU/Linux (Arch Linux)\\
+%  \bfseries
+%  Desktop Environment &--& i3wm\\
+%  \bfseries
+%  Text Editor         &--& Vim\\
+%  \bfseries
+%  Version Management  &--& Git, GitHub
+%\end{tabular}
 
-\hypertarget{general-skills}{%
-\section{General Skills}\label{general-skills}}
+\section{Projects \normalfont \small (See more on \href{https://www.github.com/housedhorse}{\color{black}GitHub})}
 
-\begin{itemize}
-\tightlist
-\item
-  Bilingual
-\item
-  Dedicated
-\item
-  Goal-oriented
-\item
-  Team leader
+\subsection{Raspberry Pi GPIO Pin Driver}
+\begin{itemize}[itemsep=0em]
+\item Wrote a Linux kernel module to act as a driver for GPIO pins on the\newline Raspberry Pi.
+\item Kernel module consisted of a character device driver with full support for asynchronous operations.
+\item Module supported read and write operations to set active pins, read pin input, and write pin output.
+\item A full writeup on the module is available at \url{http://www.wfindlay.com/portfolio/written/3000report.pdf}
 \end{itemize}
 
-\hypertarget{extracurricular-activities}{%
-\section{Extracurricular Activities}\label{extracurricular-activities}}
-
-\begin{itemize}
-\tightlist
-\item
-  Linux nerd and free software enthusiast
-\item
-  Computer builder
-\item
-  Study group leader for friends and peers
-\item
-  Former Grandmaster Starcraft II player
+\subsection{Asciify (ASCII Art Generator)}
+\begin{itemize}[itemsep=0em]
+\item Wrote an ASCII art generator CLI in Python3.
+\item Generator takes an image or GIF as input and produces ASCII art output.
+\item Full support for color and black and white ASCII art.
+\item Full support for ASCII animated GIFs.
 \end{itemize}
+
+\subsection{Genetic Algorithm for Text Generation}
+\begin{itemize}[itemsep=0em]
+\item Wrote a genetic algorithm in C++ to generate a human-readable string from random data.
+\end{itemize}
+
+\subsection{Taskmaster}
+\begin{itemize}[itemsep=0em]
+\item Wrote GUI workflow management tool in Qt5 and C++.
+\item Application keeps track of current tasks, upcoming tasks, and breaks and cycles through them with a timer.
+\end{itemize}
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.32\textwidth}
+\color{gray}
+\ %
+\vspace{-1.5em}
+
+\section{Languages}
+
+\subsection{Programming}
+
+\subsubsection{10,000 or more lines}
+
+C, C++, Python, R
+
+\subsubsection{5,000 - 10,000 lines}
+
+Java, Javascript, Lisp
+
+\subsubsection{1,000 - 5,000 lines}
+
+Haskell, Prolog, Vimscript, x86-64 Intel Assembly
+
+\subsection{Markup}
+
+Markdown, Rmarkdown, \LaTeX, HTML, CSS
+
+\subsection{Human}
+
+English, French
+
+\section{Technologies}
+
+Qt, NodeJS, Tensorflow, ReactJS, Git, Bash
+
+\section{Workflow}
+
+\subsection{Operating System}
+GNU/Linux (Arch Linux)
+
+\subsection{Window Manager}
+i3wm
+
+\subsection{Terminal and Shell}
+Termite, Bash
+
+\subsection{Text Editor}
+Vim
+
+\subsection{Version Control}
+Git, GitHub
+
+\section{Technical Skills}
+GNU/Linux kernel development\\
+Low-level C development\\
+C++ development\\
+Python scripting\\
+Statistical analysis in R\\
+Documentation in \LaTeX{} and Rmarkdown
+
+\section{General Skills}
+Team leader\\
+Dedicated\\
+Goal-oriented
+
+\section{Extracurricular}
+
+Linux nerd and free software enthusiast\\
+Computer builder\\
+Study group leader for friends and peers\\
+Former Grandmaster Starcraft II player
+
+\end{minipage}
+\end{figure}
 
 
 \end{document}
