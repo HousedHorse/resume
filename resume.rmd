@@ -245,7 +245,7 @@ output:
     number_sections: true
     fig_crop: true
     fig_caption: true
-    keep_tex: true
+    keep_tex: false
 ---
 
 \begin{figure}
@@ -305,34 +305,7 @@ April 2014 - January 2018 \hfill\emph {Ottawa, ON}
 \item Exhibited superior customer service skills as required.
 \end{itemize}
 
-
-%\section{Technical Skills}
-%
-%\begin{tabular}{l c l}
-%  {\bfseries \large Languages} &&\\
-%  \bfseries
-%  Programming   &--& C, C++, R, Java, Python, Javascript, Scheme,\\ &&Haskell, Prolog\\
-%  \bfseries
-%  Markup        &--& Markdown, Rmarkdown, \LaTeX, HTML, CSS\\
-%  \bfseries
-%  Human         &--& English, French\vspace{0.5em}\\
-%  {\bfseries \large APIs and Libraries} &&\\
-%  \bfseries
-%  C++           &--& Qt\\
-%  \bfseries
-%  Javascript    &--& Node.js, Jquery\vspace{0.5em}\\
-%  {\bfseries \large Workflow} &&\\
-%  \bfseries
-%  Operating System    &--& GNU/Linux (Arch Linux)\\
-%  \bfseries
-%  Desktop Environment &--& i3wm\\
-%  \bfseries
-%  Text Editor         &--& Vim\\
-%  \bfseries
-%  Version Management  &--& Git, GitHub
-%\end{tabular}
-
-\section{Projects \normalfont \small (See more on \href{https://www.github.com/housedhorse}{\color{black}GitHub})}
+\section{Projects \normalfont \small (See more on \href{https://www.github.com/housedhorse}{GitHub})}
 
 \subsection{Raspberry Pi GPIO Pin Driver}
 \begin{itemize}[itemsep=0em]
