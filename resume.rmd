@@ -30,7 +30,7 @@ header-includes: |
   \usepackage{fancyhdr}
   \lhead{}
   \chead{}
-  \rhead{\color{gray}Last Updated: \today}
+  \rhead{\vspace{1em}\color{gray}Last Updated: \today}
   \lfoot{}
   \cfoot{}
   \rfoot{}
@@ -52,7 +52,7 @@ header-includes: |
   commentstyle={\color{OliveGreen}},keywordstyle={\bfseries\color{Orange}},stringstyle=\color{Purple},mathescape=true}
   \setlength{\captionmargin}{1in}
 
-  \newgeometry{left=0.6in,top=.8in,bottom=.8in,right=0.6in}
+  \newgeometry{left=0.6in,top=1in,bottom=1in,right=0.6in}
 
   \newtheoremstyle{plain}
   {12pt}   % ABOVESPACE
@@ -271,7 +271,6 @@ output:
 Software Engineering Stream\\
 CGPA: 11.0 (A)
 
-
 \section{Work Experience}
 
 \color{black}
@@ -302,6 +301,7 @@ April 2014 - January 2018 \hfill\emph {Ottawa, ON}
 \color{gray}
 \begin{itemize}[itemsep=0em]
 \item Managed day-to-day operations in the front end service department.
+\item In charge of store payroll and accounting on a part-time basis.
 \item Exhibited superior customer service skills as required.
 \end{itemize}
 
@@ -336,8 +336,7 @@ April 2014 - January 2018 \hfill\emph {Ottawa, ON}
 
 \subsection{Raspberry Pi GPIO Pin Driver}
 \begin{itemize}[itemsep=0em]
-\item Wrote a Linux kernel module to act as a driver for GPIO pins on the\newline Raspberry Pi.
-\item Kernel module consisted of a character device driver with full support for asynchronous operations.
+\item Wrote a character device driver Linux kernel module to act as a driver for GPIO pins on the Raspberry Pi.
 \item Module supported read and write operations to set active pins, read pin input, and write pin output.
 \item A full writeup on the module is available at \url{http://www.wfindlay.com/portfolio/written/3000report.pdf}
 \end{itemize}
