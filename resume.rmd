@@ -329,7 +329,7 @@ April 2014 - January 2018 \hfill\emph {Ottawa, ON}
 
 \subsection{Taskmaster}
 \begin{itemize}[itemsep=0em]
-\item Wrote GUI workflow management tool in Qt5 and C++.
+\item Wrote a GUI workflow management tool in Qt5 and C++.
 \item Application keeps track of current tasks, upcoming tasks, and breaks and cycles through them with a timer.
 \end{itemize}
 
