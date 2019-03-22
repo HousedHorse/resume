@@ -268,7 +268,7 @@ output:
 {September 2015 - April 2020} \hfill\emph {Ottawa, ON}
 \color{gray}
 
-Software Engineering Stream\\
+Computer and Network Security Stream\\
 CGPA: 11.0 (A)
 
 \section{Work Experience}
@@ -278,6 +278,7 @@ CGPA: 11.0 (A)
 September 2018 - Present \hfill\emph {Ottawa, ON}
 \color{gray}
 \begin{itemize}[itemsep=0em]
+\item Current nominee for the \href{https://carleton.ca/tasupport/taawards/edc-outstanding-ta-awards/}{Outstanding Teaching Assistant Award}
 \item Ran tutorial sessions for groups of 50 students.
 \item Took a leadership role to ensure tutorials proceeded smoothly.
 \item Held weekly office hours and workshops for students.
@@ -399,7 +400,6 @@ Dedicated\\
 Goal-oriented
 
 \section{Extracurricular}
-
 Linux nerd and free software enthusiast\\
 Computer builder\\
 Study group leader for friends and peers\\

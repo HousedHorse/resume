@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.21)  25 FEB 2019 20:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.21)  22 MAR 2019 14:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1473,7 +1473,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 320.
 
-LaTeX Warning: Float too large for page by 2.91391pt on input line 470.
+LaTeX Warning: Float too large for page by 15.91391pt on input line 470.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 473.
 
@@ -1494,7 +1494,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 473.
 Here is how much of TeX's memory you used:
  40206 strings out of 492616
  735608 string characters out of 6135177
- 813718 words of memory out of 5000000
+ 813715 words of memory out of 5000000
  43468 multiletter control sequences out of 15000+600000
  599091 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1506,10 +1506,10 @@ f-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf-dist/fonts/type1/pub
 lic/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf-dist/fonts/type
 1/public/lm/lmri9.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy9.pfb>
-Output written on resume.pdf (1 page, 177013 bytes).
+Output written on resume.pdf (1 page, 176567 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
- 146 compressed objects within 2 object streams
+ 160 PDF objects out of 1000 (max. 8388607)
+ 147 compressed objects within 2 object streams
  26 named destinations out of 1000 (max. 500000)
  14541 words of extra memory for PDF output out of 17280 (max. 10000000)
 
