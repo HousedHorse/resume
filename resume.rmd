@@ -269,31 +269,33 @@ output:
 \color{gray}
 
 Computer and Network Security Stream\\
+Accelerated Masters Program\\
 CGPA: 11.0 (A)
 
 \section{Work Experience}
+
+\color{black}
+\textbf{Undergraduate Researcher} (Linux Kernel Security) \hfill \emph{Carleton University}\\
+April 2019 - Present \hfill\emph {Ottawa, ON}
+\color{gray}
+\begin{itemize}[itemsep=0em]
+\item Researching the viability of eBPF-based implementations for intrusion detection systems on the GNU/Linux operating system.
+\item Designed and implemented \texttt{ebpH}, an intrusion detection system that uses eBPF-based observability filters to establish regular process behavior and detect anomalous system call patterns
+\item Project is currently closed-source pending publication.
+\end{itemize}
 
 \color{black}
 \textbf{Teaching Assistant} (COMP3000 Operating Systems) \hfill \emph{Carleton University}\\
 September 2018 - Present \hfill\emph {Ottawa, ON}
 \color{gray}
 \begin{itemize}[itemsep=0em]
-\item Current nominee for the \href{https://carleton.ca/tasupport/taawards/edc-outstanding-ta-awards/}{Outstanding Teaching Assistant Award}
+\item Nominee for the \href{https://carleton.ca/tasupport/taawards/edc-outstanding-ta-awards/}{Outstanding Teaching Assistant Award}
 \item Ran tutorial sessions for groups of 50 students.
 \item Took a leadership role to ensure tutorials proceeded smoothly.
 \item Held weekly office hours and workshops for students.
 \item Graded assignments and tests and gave appropriate feedback.
 \item Proctored exams for about 200 students.
 \item Assisted professor with development and delivery of course material.
-\end{itemize}
-
-\color{black}
-\textbf{Full Stack Developer} \hfill \emph{Hilltops Real Estate Group}\\
-May 2018 - September 2018 \hfill\emph {(Remotely) Dallas, TX}
-\color{gray}
-\begin{itemize}[itemsep=0em]
-\item Developed website for a startup student housing company.
-\item Led a small team of developers working on full stack development of a business website.
 \end{itemize}
 
 \color{black}
@@ -312,7 +314,7 @@ April 2014 - January 2018 \hfill\emph {Ottawa, ON}
 \begin{itemize}[itemsep=0em]
 \item Wrote a character device driver Linux kernel module to act as a driver for GPIO pins on the Raspberry Pi.
 \item Module supported read and write operations to set active pins, read pin input, and write pin output.
-\item A full writeup on the module is available at \url{http://www.wfindlay.com/portfolio/written/3000report.pdf}
+\item A full writeup on the module is available at \url{https://wfindlay.com/assets/written/3000report.pdf}
 \end{itemize}
 
 \subsection{Asciify (ASCII Art Generator)}
@@ -328,12 +330,6 @@ April 2014 - January 2018 \hfill\emph {Ottawa, ON}
 \item Wrote a genetic algorithm in C++ to generate a human-readable string from random data.
 \end{itemize}
 
-\subsection{Taskmaster}
-\begin{itemize}[itemsep=0em]
-\item Wrote a GUI workflow management tool in Qt5 and C++.
-\item Application keeps track of current tasks, upcoming tasks, and breaks and cycles through them with a timer.
-\end{itemize}
-
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.32\textwidth}
@@ -347,15 +343,15 @@ April 2014 - January 2018 \hfill\emph {Ottawa, ON}
 
 \subsubsection{10,000 or more lines}
 
-C, C++, Python, R
+C, C++, Python
 
 \subsubsection{5,000 - 10,000 lines}
 
-Java, Javascript, Lisp
+Java, Javascript
 
 \subsubsection{1,000 - 5,000 lines}
 
-Haskell, Prolog, Vimscript, x86-64 Intel Assembly
+Haskell, Prolog, Vimscript, R, Common Lisp
 
 \subsection{Markup}
 
@@ -367,7 +363,7 @@ English, French
 
 \section{Technologies}
 
-Qt, NodeJS, Tensorflow, ReactJS, Git, Bash
+Linux Kernel development, eBPF, bcc, Qt, NodeJS, Tensorflow, ReactJS, Git, Bash
 
 \section{Workflow}
 
@@ -400,10 +396,10 @@ Dedicated\\
 Goal-oriented
 
 \section{Extracurricular}
-Linux nerd and free software enthusiast\\
+Avid Linux user\\
+Free software enthusiast\\
 Computer builder\\
-Study group leader for friends and peers\\
-Former Grandmaster Starcraft II player
+Study group leader for friends and peers
 
 \end{minipage}
 \end{figure}
