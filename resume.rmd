@@ -251,7 +251,7 @@ output:
 \small
 \begin{minipage}[t]{0.65\textwidth}
 \begin{center}
-{\Huge\bfseries {\color{gray}William} Findlay}
+{\Huge\bfseries William Findlay}
 
 \color{gray}
 

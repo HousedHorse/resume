@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.8.25)  19 SEP 2019 20:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.8.25)  20 SEP 2019 09:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1691,7 +1691,7 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 346.
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
-LaTeX Warning: Float too large for page by 35.24416pt on input line 474.
+LaTeX Warning: Float too large for page by 52.2548pt on input line 474.
 
 
 LaTeX Warning: Empty bibliography on input line 476.
@@ -1718,7 +1718,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 479.
 Here is how much of TeX's memory you used:
  46386 strings out of 492623
  854273 string characters out of 6135669
- 1272281 words of memory out of 5000000
+ 1273281 words of memory out of 5000000
  49604 multiletter control sequences out of 15000+600000
  599321 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
