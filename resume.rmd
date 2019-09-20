@@ -4,8 +4,6 @@ author:
 - William Findlay
 title: R&eacute;sum&eacute;
 date: \today
-bibliography: /home/housedhorse/.bibs/uni.bib
-csl: /home/housedhorse/.bibs/ieee.csl
 subparagraph: yes
 header-includes: |
   ``` {=latex}
@@ -241,11 +239,12 @@ header-includes: |
   }
   ```
 output:
-  pdf_document:
-    number_sections: true
-    fig_crop: true
-    fig_caption: true
-    keep_tex: false
+    pdf_document:
+      citation_package: biblatex
+      number_sections: true
+      fig_crop: true
+      fig_caption: true
+      keep_tex: true
 ---
 
 \begin{figure}
@@ -256,7 +255,7 @@ output:
 
 \color{gray}
 
-\href{https://www.github.com/housedhorse}{\color{gray}github.com/housedhorse} $\bullet$ \href{http://www.wfindlay.com}{\color{gray}wfindlay.com}\\
+\href{https://www.github.com/willfindlay}{\color{gray}github.com/willfindlay} $\bullet$ \href{http://www.wfindlay.com}{\color{gray}wfindlay.com}\\
 {\color{gray}(613) 296-1240} $\bullet$ \href{mailto:william@wfindlay.com}{\color{gray}william@wfindlay.com}
 \end{center}
 
@@ -308,7 +307,7 @@ April 2014 - January 2018 \hfill\emph {Ottawa, ON}
 \item Exhibited superior customer service skills as required.
 \end{itemize}
 
-\section{Projects \normalfont \small (See more on \href{https://www.github.com/housedhorse}{GitHub})}
+\section{Projects \normalfont \small (See more on \href{https://www.github.com/willfindlay}{GitHub})}
 
 \subsection{Raspberry Pi GPIO Pin Driver}
 \begin{itemize}[itemsep=0em]
@@ -363,7 +362,7 @@ English, French
 
 \section{Technologies}
 
-Linux Kernel development, eBPF, bcc, Qt, NodeJS, Tensorflow, ReactJS, Git, Bash
+Linux Kernel, eBPF, bcc, Qt, NodeJS, Git, Bash
 
 \section{Workflow}
 
@@ -383,23 +382,29 @@ Vim
 Git, GitHub
 
 \section{Technical Skills}
-GNU/Linux kernel development\\
-Low-level C development\\
-C++ development\\
-Python scripting\\
-Statistical analysis in R\\
-Documentation in \LaTeX{} and Rmarkdown
+\begin{itemize}[itemsep=0em]
+\item GNU/Linux kernel development
+\item Low-level C development
+\item C++ development
+\item Python scripting
+\item Statistical analysis in Python (pandas, numpy, scipy) and R
+\item Documentation in \LaTeX{}
+\end{itemize}
 
 \section{General Skills}
-Team leader\\
-Dedicated\\
-Goal-oriented
+\begin{itemize}[itemsep=0em]
+\item Team leader
+\item Dedicated
+\item Goal-oriented
+\end{itemize}
 
 \section{Extracurricular}
-Avid Linux user\\
-Free software enthusiast\\
-Computer builder\\
-Study group leader for friends and peers
+\begin{itemize}[itemsep=0em]
+\item Avid Linux user
+\item Free software enthusiast
+\item Computer builder
+\item Study group leader for friends and peers
+\end{itemize}
 
 \end{minipage}
 \end{figure}

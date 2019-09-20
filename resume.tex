@@ -1,0 +1,479 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={Résumé},
+            pdfauthor={William Findlay},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{biblatex}
+
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{Résumé}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{William Findlay}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{\today}
+
+\usepackage{float}
+\usepackage{listings}
+\usepackage[hang,bf]{caption}
+\usepackage{framed}
+\usepackage[section]{placeins}
+
+\usepackage[dvipsnames,table]{xcolor}
+
+\definecolor{gray}{HTML}{606060}
+\definecolor{black}{HTML}{000000}
+
+\usepackage{pifont}
+
+\allowdisplaybreaks
+
+\usepackage[bottom]{footmisc}
+% fancy headers/footers
+\makeatletter
+\usepackage{fancyhdr}
+\lhead{}
+\chead{}
+\rhead{\vspace{1em}\color{gray}Last Updated: \today}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0pt}
+
+\usepackage{amsmath, amsfonts,amssymb, amsthm}
+\usepackage{siunitx}
+\usepackage[boxruled,lined,linesnumbered,titlenumbered]{algorithm2e}
+
+\usepackage{setspace}
+\usepackage{changepage}
+\usepackage[explicit]{titlesec}
+\usepackage{aliascnt}
+
+\floatplacement{figure}{!htbp}
+\floatplacement{table}{!htbp}
+\lstset{numbers=left,breaklines=true,frame=single,language=Python,captionpos=t,abovecaptionskip={\abovecaptionskip},
+belowcaptionskip={0.5em},aboveskip=\intextsep,showstringspaces=false,identifierstyle=\color{Blue},
+commentstyle={\color{OliveGreen}},keywordstyle={\bfseries\color{Orange}},stringstyle=\color{Purple},mathescape=true}
+\setlength{\captionmargin}{1in}
+
+\newgeometry{left=0.6in,top=1in,bottom=1in,right=0.6in}
+
+\newtheoremstyle{plain}
+{12pt}   % ABOVESPACE
+{12pt}   % BELOWSPACE
+{\itshape}  % BODYFONT
+{0pt}       % INDENT (empty value is the same as 0pt)
+{\bfseries} % HEADFONT
+{.}         % HEADPUNCT
+{5pt plus 1pt minus 1pt} % HEADSPACE
+{}          % CUSTOM-HEAD-SPEC
+
+\newtheoremstyle{definition}
+{12pt}   % ABOVESPACE
+{12pt}   % BELOWSPACE
+{\normalfont}  % BODYFONT
+{0pt}       % INDENT (empty value is the same as 0pt)
+{\bfseries} % HEADFONT
+{.}         % HEADPUNCT
+{5pt plus 1pt minus 1pt} % HEADSPACE
+{}          % CUSTOM-HEAD-SPEC
+
+\newtheoremstyle{remark}
+{12pt}   % ABOVESPACE
+{12pt}   % BELOWSPACE
+{\normalfont}  % BODYFONT
+{0pt}       % INDENT (empty value is the same as 0pt)
+{\itshape} % HEADFONT
+{.}         % HEADPUNCT
+{5pt plus 1pt minus 1pt} % HEADSPACE
+{}          % CUSTOM-HEAD-SPEC
+
+\theoremstyle{plain}
+
+% define theorem
+\newtheorem{theorem}{Theorem}[section]
+\providecommand*{\theoremautorefname}{Theorem}
+
+% define lemma
+\newtheorem{lemma}{Lemma}[section]
+\providecommand*{\lemmaautorefname}{Lemma}
+
+% define claim
+\newtheorem{claim}{Claim}[section]
+\providecommand*{\claimautorefname}{Claim}
+
+% define corollary
+\newtheorem{corollary}{Corollary}[section]
+\providecommand*{\corollaryautorefname}{Corollary}
+
+% define proposition
+\newtheorem{proposition}{Proposition}[section]
+\providecommand*{\propositionautorefname}{Proposition}
+
+% define conjecture
+\newtheorem{conjecture}{Conjecture}[section]
+\providecommand*{\conjectureautorefname}{Conjecture}
+
+\theoremstyle{remark}
+
+% define observation
+\newtheorem{observation}{Observation}[section]
+\providecommand*{\observationautorefname}{Observation}
+
+% define remark
+\newtheorem{remark}{Remark}[section]
+\providecommand*{\remarkautorefname}{Remark}
+
+\theoremstyle{definition}
+
+% define example
+\newtheorem{example}{Example}[section]
+\providecommand*{\exampleautorefname}{Example}
+
+% define definition
+\newtheorem{definition}{Definition}[section]
+\providecommand*{\definitionautorefname}{Definition}
+
+\newcommand{\blackbox}{\hfill$\blacksquare$}
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{\ding{226}}
+\renewcommand{\labelitemiii}{\tiny$\blacksquare$}
+\renewcommand{\labelitemiv}{\small$\triangleright$}
+
+\titleformat{\paragraph} % command to change
+[runin]                  % shape  (runin, etc.)
+{\bfseries}              % format (bfseries, itshape, etc.)
+{}                       % label  (thesection, thesubsection, etc.)
+{0em}                    % separation between label and body
+{#1}        % before the body
+[.]                       % after the body
+
+\titleformat{\subparagraph} % command to change
+[runin]                  % shape  (runin, etc.)
+{\itshape}              % format (bfseries, itshape, etc.)
+{}                       % label  (thesection, thesubsection, etc.)
+{0em}                    % separation between label and body
+{#1}        % before the body
+[.]                       % after the body
+
+\let\lil\lstinputlisting
+\usepackage{afterpage}
+\hypersetup{colorlinks, allcolors=., urlcolor=blue}
+
+\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+\makeatletter
+\patchcmd{\lst@GLI@}% <command>
+  {\def\lst@firstline{#1\relax}}% <search>
+  {\def\lst@firstline{#1\relax}\def\lst@firstnumber{#1\relax}}% <replace>
+  {\typeout{listings firstnumber=firstline}}% <success>
+  {\typeout{listings firstnumber not set}}% <failure>
+\makeatother
+
+\renewcommand\lstlistlistingname{List of Listings}
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\pagestyle{fancy}
+
+\renewcommand{\sectionautorefname}{Section}
+\renewcommand{\subsectionautorefname}{Subection}
+\renewcommand{\subsubsectionautorefname}{Subection}
+\renewcommand{\paragraphautorefname}{}
+\renewcommand{\subparagraphautorefname}{}
+
+\usepackage{nameref}
+
+\makeatletter
+\renewcommand{\theparagraph}{\bfseries \@currentlabelname}
+\renewcommand{\thesubparagraph}{\itshape \@currentlabelname}
+\makeatother
+
+\definecolor{purple}{HTML}{400080}
+
+\titleformat{\section}
+{\color{black}\Large\scshape}
+{}
+{0em}
+{#1}[{\color{gray}\hrule}]
+
+\titleformat{\subsection}
+{\color{black}\bfseries}
+{}
+{0em}
+{#1}
+
+\titleformat{\subsubsection}
+{\color{black}}
+{}
+{0em}
+{#1}[]
+
+\titlespacing{\section}
+{0em}{1em}{0.5em}
+
+\titlespacing{\subsection}
+{0em}{0.5em}{0em}
+
+\titlespacing{\subsubsection}
+{0em}{0.5em}{0em}
+
+\renewcommand{\maketitle}{\relax}
+
+\usepackage{enumitem}
+\setitemize{itemsep=0em}
+
+\newcommand{\sep}{
+  {\color{black}$\bullet$}
+}
+
+\begin{document}
+\maketitle
+
+\begin{figure}
+\small
+\begin{minipage}[t]{0.65\textwidth}
+\begin{center}
+{\Huge\bfseries {\color{gray}William} Findlay}
+
+\color{gray}
+
+\href{https://www.github.com/willfindlay}{\color{gray}github.com/willfindlay} $\bullet$ \href{http://www.wfindlay.com}{\color{gray}wfindlay.com}\\
+{\color{gray}(613) 296-1240} $\bullet$ \href{mailto:william@wfindlay.com}{\color{gray}william@wfindlay.com}
+\end{center}
+
+\color{gray}
+
+\section{Education}
+\color{black}
+\textbf{Bachelor of Computer Science} \hfill \emph{Carleton University}\\
+{September 2015 - April 2020} \hfill\emph {Ottawa, ON}
+\color{gray}
+
+Computer and Network Security Stream\\
+Accelerated Masters Program\\
+CGPA: 11.0 (A)
+
+\section{Work Experience}
+
+\color{black}
+\textbf{Undergraduate Researcher} (Linux Kernel Security) \hfill \emph{Carleton University}\\
+April 2019 - Present \hfill\emph {Ottawa, ON}
+\color{gray}
+\begin{itemize}[itemsep=0em]
+\item Researching the viability of eBPF-based implementations for intrusion detection systems on the GNU/Linux operating system.
+\item Designed and implemented \texttt{ebpH}, an intrusion detection system that uses eBPF-based observability filters to establish regular process behavior and detect anomalous system call patterns
+\item Project is currently closed-source pending publication.
+\end{itemize}
+
+\color{black}
+\textbf{Teaching Assistant} (COMP3000 Operating Systems) \hfill \emph{Carleton University}\\
+September 2018 - Present \hfill\emph {Ottawa, ON}
+\color{gray}
+\begin{itemize}[itemsep=0em]
+\item Nominee for the \href{https://carleton.ca/tasupport/taawards/edc-outstanding-ta-awards/}{Outstanding Teaching Assistant Award}
+\item Ran tutorial sessions for groups of 50 students.
+\item Took a leadership role to ensure tutorials proceeded smoothly.
+\item Held weekly office hours and workshops for students.
+\item Graded assignments and tests and gave appropriate feedback.
+\item Proctored exams for about 200 students.
+\item Assisted professor with development and delivery of course material.
+\end{itemize}
+
+\color{black}
+\textbf{Service Department Supervisor} \hfill \emph{Metro Ontario, Inc.}\\
+April 2014 - January 2018 \hfill\emph {Ottawa, ON}
+\color{gray}
+\begin{itemize}[itemsep=0em]
+\item Managed day-to-day operations in the front end service department.
+\item In charge of store payroll and accounting on a part-time basis.
+\item Exhibited superior customer service skills as required.
+\end{itemize}
+
+\section{Projects \normalfont \small (See more on \href{https://www.github.com/willfindlay}{GitHub})}
+
+\subsection{Raspberry Pi GPIO Pin Driver}
+\begin{itemize}[itemsep=0em]
+\item Wrote a character device driver Linux kernel module to act as a driver for GPIO pins on the Raspberry Pi.
+\item Module supported read and write operations to set active pins, read pin input, and write pin output.
+\item A full writeup on the module is available at \url{https://wfindlay.com/assets/written/3000report.pdf}
+\end{itemize}
+
+\subsection{Asciify (ASCII Art Generator)}
+\begin{itemize}[itemsep=0em]
+\item Wrote an ASCII art generator CLI in Python3.
+\item Generator takes an image or GIF as input and produces ASCII art output.
+\item Full support for color and black and white ASCII art.
+\item Full support for ASCII animated GIFs.
+\end{itemize}
+
+\subsection{Genetic Algorithm for Text Generation}
+\begin{itemize}[itemsep=0em]
+\item Wrote a genetic algorithm in C++ to generate a human-readable string from random data.
+\end{itemize}
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.32\textwidth}
+\color{gray}
+\ %
+\vspace{-1.5em}
+
+\section{Languages}
+
+\subsection{Programming}
+
+\subsubsection{10,000 or more lines}
+
+C, C++, Python
+
+\subsubsection{5,000 - 10,000 lines}
+
+Java, Javascript
+
+\subsubsection{1,000 - 5,000 lines}
+
+Haskell, Prolog, Vimscript, R, Common Lisp
+
+\subsection{Markup}
+
+Markdown, Rmarkdown, \LaTeX, HTML, CSS
+
+\subsection{Human}
+
+English, French
+
+\section{Technologies}
+
+Linux Kernel, eBPF, bcc, Qt, NodeJS, Git, Bash
+
+\section{Workflow}
+
+\subsection{Operating System}
+GNU/Linux (Arch Linux)
+
+\subsection{Window Manager}
+i3wm
+
+\subsection{Terminal and Shell}
+Termite, Bash
+
+\subsection{Text Editor}
+Vim
+
+\subsection{Version Control}
+Git, GitHub
+
+\section{Technical Skills}
+\begin{itemize}[itemsep=0em]
+\item GNU/Linux kernel development
+\item Low-level C development
+\item C++ development
+\item Python scripting
+\item Statistical analysis in Python (pandas, numpy, scipy) and R
+\item Documentation in \LaTeX{}
+\end{itemize}
+
+\section{General Skills}
+\begin{itemize}[itemsep=0em]
+\item Team leader
+\item Dedicated
+\item Goal-oriented
+\end{itemize}
+
+\section{Extracurricular}
+\begin{itemize}[itemsep=0em]
+\item Avid Linux user
+\item Free software enthusiast
+\item Computer builder
+\item Study group leader for friends and peers
+\end{itemize}
+
+\end{minipage}
+\end{figure}
+
+\printbibliography
+
+
+\end{document}
