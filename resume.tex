@@ -120,7 +120,7 @@ belowcaptionskip={0.5em},aboveskip=\intextsep,showstringspaces=false,identifiers
 commentstyle={\color{OliveGreen}},keywordstyle={\bfseries\color{Orange}},stringstyle=\color{Purple},mathescape=true}
 \setlength{\captionmargin}{1in}
 
-\newgeometry{left=0.6in,top=1in,bottom=1in,right=0.6in}
+\newgeometry{left=0.6in,top=0.75in,bottom=1in,right=0.6in}
 
 \newtheoremstyle{plain}
 {12pt}   % ABOVESPACE
@@ -319,8 +319,8 @@ commentstyle={\color{OliveGreen}},keywordstyle={\bfseries\color{Orange}},strings
 
 \color{gray}
 
-\href{https://www.github.com/willfindlay}{\color{gray}github.com/willfindlay} $\bullet$ \href{http://www.wfindlay.com}{\color{gray}wfindlay.com}\\
-{\color{gray}(613) 296-1240} $\bullet$ \href{mailto:william@wfindlay.com}{\color{gray}william@wfindlay.com}
+\href{https://www.github.com/willfindlay}{\color{gray}github.com/willfindlay} $\bullet$ \href{http://www.williamfindlay.com}{\color{gray}williamfindlay.com}\\
+{\color{gray}(613) 296-1240} $\bullet$ \href{mailto:william@williamfindlay.com}{\color{gray}william@williamfindlay.com}
 \end{center}
 
 \color{gray}
@@ -338,13 +338,13 @@ CGPA: 11.0 (A)
 \section{Work Experience}
 
 \color{black}
-\textbf{Undergraduate Researcher} (Linux Kernel Security) \hfill \emph{Carleton University}\\
+\textbf{Undergraduate Researcher} (Linux Introspection/Security) \hfill \emph{Carleton University}\\
 April 2019 - Present \hfill\emph {Ottawa, ON}
 \color{gray}
 \begin{itemize}[itemsep=0em]
 \item Researching the viability of eBPF-based implementations for intrusion detection systems on the GNU/Linux operating system.
-\item Designed and implemented \texttt{ebpH}, an intrusion detection system that uses eBPF-based observability filters to establish regular process behavior and detect anomalous system call patterns
-\item Project is currently closed-source pending publication.
+\item Designed and implemented ebpH, an intrusion detection system based entirely on eBPF system introspection. See Projects below.
+\item This research is the subject of my 2019/2020 honors thesis, which is currently in progress.
 \end{itemize}
 
 \color{black}
@@ -358,7 +358,7 @@ September 2018 - Present \hfill\emph {Ottawa, ON}
 \item Held weekly office hours and workshops for students.
 \item Graded assignments and tests and gave appropriate feedback.
 \item Proctored exams for about 200 students.
-\item Assisted professor with development and delivery of course material.
+\item Developed a tutorial on rootkits in Linux which was well received.
 \end{itemize}
 
 \color{black}
@@ -373,24 +373,25 @@ April 2014 - January 2018 \hfill\emph {Ottawa, ON}
 
 \section{Projects \normalfont \small (See more on \href{https://www.github.com/willfindlay}{GitHub})}
 
-\subsection{Raspberry Pi GPIO Pin Driver}
+\subsection{ebpH (An eBPF-based Intrusion Detection System)}
 \begin{itemize}[itemsep=0em]
-\item Wrote a character device driver Linux kernel module to act as a driver for GPIO pins on the Raspberry Pi.
-\item Module supported read and write operations to set active pins, read pin input, and write pin output.
-\item A full writeup on the module is available at \url{https://wfindlay.com/assets/written/3000report.pdf}
+\item An intrusion detection system for Linux written entirely in eBPF and Python3.
+\item Establishes per-executable system call profiles in order to establish normal behavior and detect anomalies.
+\item Project is currently closed-source pending publication.
 \end{itemize}
 
-\subsection{Asciify (ASCII Art Generator)}
+\subsection{Snoopy (An eBPF-based Debugger)}
 \begin{itemize}[itemsep=0em]
-\item Wrote an ASCII art generator CLI in Python3.
-\item Generator takes an image or GIF as input and produces ASCII art output.
-\item Full support for color and black and white ASCII art.
-\item Full support for ASCII animated GIFs.
+\item System call tracing debugger written in eBPF and Python3.
+\item Competitor to strace, with much higher performance due to lack of reliance on the ptrace system call.
+\item Full source code available at \url{https://github.com/willfindlay/snoopy}.
 \end{itemize}
 
-\subsection{Genetic Algorithm for Text Generation}
+\subsection{Naga (An eBPF/XDP packet analysis tool)}
 \begin{itemize}[itemsep=0em]
-\item Wrote a genetic algorithm in C++ to generate a human-readable string from random data.
+\item Packet analysis tool written in eBPF/XDP and Python3.
+\item Currently a work in progress, experimenting with various machine learning models for packet analysis.
+\item Full source code available at \url{https://github.com/willfindlay/naga}.
 \end{itemize}
 
 \end{minipage}
@@ -448,9 +449,9 @@ Git, GitHub
 \section{Technical Skills}
 \begin{itemize}[itemsep=0em]
 \item GNU/Linux kernel development
-\item Low-level C development
-\item C++ development
-\item Python scripting
+\item eBPF
+\item C and C++
+\item Python
 \item Statistical analysis in Python (pandas, numpy, scipy) and R
 \item Documentation in \LaTeX{}
 \end{itemize}
