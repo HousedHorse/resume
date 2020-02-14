@@ -1,3 +1,4 @@
+*.md
 *.tex
 ## Core latex/pdflatex auxiliary files:
 *.aux
