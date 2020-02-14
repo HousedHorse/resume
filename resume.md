@@ -1,4 +1,3 @@
-
 ---
 author:
 - William Findlay
@@ -12,8 +11,6 @@ header-includes: |
   \usepackage[hang,bf]{caption}
   \usepackage{framed}
   \usepackage[section]{placeins}
-
-  \usepackage[dvipsnames,table]{xcolor}
 
   \definecolor{gray}{HTML}{606060}
   \definecolor{black}{HTML}{000000}
@@ -49,6 +46,8 @@ header-includes: |
   belowcaptionskip={0.5em},aboveskip=\intextsep,showstringspaces=false,identifierstyle=\color{Blue},
   commentstyle={\color{OliveGreen}},keywordstyle={\bfseries\color{Orange}},stringstyle=\color{Purple},mathescape=true}
   \setlength{\captionmargin}{1in}
+
+  \usepackage{geometry}
 
   \newgeometry{left=0.6in,top=0.75in,bottom=1in,right=0.6in}
 
@@ -274,13 +273,13 @@ CGPA: 11.0 (A)
 \section{Work Experience}
 
 \color{black}
-\textbf{Undergraduate Researcher} (Linux Introspection/Security) \hfill \emph{Carleton University}\\
+\textbf{Undergraduate Researcher} (Linux OS Security) \hfill \emph{Carleton University}\\
 April 2019 - Present \hfill\emph {Ottawa, ON}
 \color{gray}
 \begin{itemize}[itemsep=0em]
 \item Researching the viability of eBPF-based implementations for intrusion detection systems on the GNU/Linux operating system.
-\item Designed and implemented ebpH, an intrusion detection system based entirely on eBPF system introspection. See Projects below.
-\item This research is the subject of my 2019/2020 honors thesis, which is currently in progress.
+\item Designed and implemented ebpH, an intrusion detection system based entirely on eBPF system introspection.
+\item This research is the subject of my 2019/2020 honors thesis. You can read my thesis proposal at \url{https://williamfindlay.com/written/thesis-proposal.pdf}.
 \end{itemize}
 
 \color{black}
@@ -289,12 +288,11 @@ September 2018 - Present \hfill\emph {Ottawa, ON}
 \color{gray}
 \begin{itemize}[itemsep=0em]
 \item Nominee for the \href{https://carleton.ca/tasupport/taawards/edc-outstanding-ta-awards/}{Outstanding Teaching Assistant Award}
+\item Assisted the professor in development of course material.
 \item Ran tutorial sessions for groups of 50 students.
 \item Took a leadership role to ensure tutorials proceeded smoothly.
 \item Held weekly office hours and workshops for students.
 \item Graded assignments and tests and gave appropriate feedback.
-\item Proctored exams for about 200 students.
-\item Developed a tutorial on rootkits in Linux which was well received.
 \end{itemize}
 
 \color{black}
@@ -309,25 +307,24 @@ April 2014 - January 2018 \hfill\emph {Ottawa, ON}
 
 \section{Projects \normalfont \small (See more on \href{https://www.github.com/willfindlay}{GitHub})}
 
-\subsection{ebpH (An eBPF-based Intrusion Detection System)}
+\subsection{ebpH (eBPF Intrusion Detection System)}
 \begin{itemize}[itemsep=0em]
 \item An intrusion detection system for Linux written entirely in eBPF and Python3.
 \item Establishes per-executable system call profiles in order to establish normal behavior and detect anomalies.
-\item Project is currently closed-source pending publication.
+\item Full source code available at \url{https://github.com/willfindlay/ebph}.
 \end{itemize}
 
-\subsection{Snoopy (An eBPF-based Debugger)}
+\subsection{Snoopy (eBPF Debugger)}
 \begin{itemize}[itemsep=0em]
 \item System call tracing debugger written in eBPF and Python3.
 \item Competitor to strace, with much higher performance due to lack of reliance on the ptrace system call.
 \item Full source code available at \url{https://github.com/willfindlay/snoopy}.
 \end{itemize}
 
-\subsection{Naga (An eBPF/XDP packet analysis tool)}
+\subsection{bpf-keylogger (eBPF Keylogger Program)}
 \begin{itemize}[itemsep=0em]
-\item Packet analysis tool written in eBPF/XDP and Python3.
-\item Currently a work in progress, experimenting with various machine learning models for packet analysis.
-\item Full source code available at \url{https://github.com/willfindlay/naga}.
+\item Fully functional keylogger for GNU/Linux written in eBPF and Python3.
+\item Full source code available at \url{https://github.com/willfindlay/bpf-keylogger}.
 \end{itemize}
 
 \end{minipage}
@@ -361,10 +358,6 @@ Markdown, Rmarkdown, \LaTeX, HTML, CSS
 
 English, French
 
-\section{Technologies}
-
-Linux Kernel, eBPF, bcc, Qt, NodeJS, Git, Bash
-
 \section{Workflow}
 
 \subsection{Operating System}
@@ -373,8 +366,8 @@ GNU/Linux (Arch Linux)
 \subsection{Window Manager}
 i3wm
 
-\subsection{Terminal and Shell}
-Termite, Bash
+\subsection{Shell}
+Zsh
 
 \subsection{Text Editor}
 Vim
@@ -382,29 +375,31 @@ Vim
 \subsection{Version Control}
 Git, GitHub
 
-\section{Technical Skills}
+\section{Technologies}
+\vspace{0.5em}
 \begin{itemize}[itemsep=0em]
-\item GNU/Linux kernel development
-\item eBPF
-\item C and C++
-\item Python
-\item Statistical analysis in Python (pandas, numpy, scipy) and R
-\item Documentation in \LaTeX{}
+\item eBPF, XDP, bcc
+\item gdb
+\item flask
+\item numpy, scipy, pandas
+\item Qt
+\end{itemize}
+
+\section{Technical Skills}
+\vspace{0.5em}
+\begin{itemize}[itemsep=0em]
+\item Linux kernel development
+\item Low level systems programming
+\item Python scripting
+\item Technical writing and documentation
 \end{itemize}
 
 \section{General Skills}
+\vspace{0.5em}
 \begin{itemize}[itemsep=0em]
 \item Team leader
 \item Dedicated
 \item Goal-oriented
-\end{itemize}
-
-\section{Extracurricular}
-\begin{itemize}[itemsep=0em]
-\item Avid Linux user
-\item Free software enthusiast
-\item Computer builder
-\item Study group leader for friends and peers
 \end{itemize}
 
 \end{minipage}
