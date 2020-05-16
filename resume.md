@@ -6,13 +6,16 @@ date: \today
 subparagraph: yes
 header-includes: |
   ``` {=latex}
+  \usepackage{hyperref}
+  \usepackage{amsmath}
+  \usepackage{xcolor}
   \usepackage{float}
   \usepackage{listings}
   \usepackage[hang,bf]{caption}
   \usepackage{framed}
   \usepackage[section]{placeins}
 
-  \definecolor{gray}{HTML}{606060}
+  \definecolor{gray}{HTML}{404040}
   \definecolor{black}{HTML}{000000}
 
   \usepackage{pifont}
@@ -262,24 +265,32 @@ output:
 
 \section{Education}
 \color{black}
+\textbf{Master of Computer Science} \hfill \emph{Carleton University}\\
+{September 2020 - April 2021} \hfill\emph {Ottawa, ON}
+\color{gray}
+
+Accelerated Master's Program\\
+CGPA: 12.0 (A+) (\textit{Course work completed during bachelor's degree})\\
+
+\color{black}
 \textbf{Bachelor of Computer Science} \hfill \emph{Carleton University}\\
 {September 2015 - April 2020} \hfill\emph {Ottawa, ON}
 \color{gray}
 
 Computer and Network Security Stream\\
-Accelerated Masters Program\\
-CGPA: 11.0 (A)
+Accelerated Master's Program\\
+CGPA: 11.5 (A)
 
 \section{Work Experience}
 
 \color{black}
-\textbf{Undergraduate Researcher} (Linux OS Security) \hfill \emph{Carleton University}\\
+\textbf{Research Assistant} (Linux OS Security) \hfill \emph{Carleton University}\\
 April 2019 - Present \hfill\emph {Ottawa, ON}
 \color{gray}
 \begin{itemize}[itemsep=0em]
 \item Researching the viability of eBPF-based implementations for intrusion detection systems on the GNU/Linux operating system.
 \item Designed and implemented ebpH, an intrusion detection system based entirely on eBPF system introspection.
-\item This research is the subject of my 2019/2020 honors thesis. You can read my thesis proposal at \url{https://williamfindlay.com/written/thesis-proposal.pdf}.
+\item This research was the subject of my 2019/2020 honors thesis. You can read my thesis at \url{https://williamfindlay.com/written/thesis.pdf}.
 \end{itemize}
 
 \color{black}
@@ -287,7 +298,7 @@ April 2019 - Present \hfill\emph {Ottawa, ON}
 September 2018 - Present \hfill\emph {Ottawa, ON}
 \color{gray}
 \begin{itemize}[itemsep=0em]
-\item Nominee for the \href{https://carleton.ca/tasupport/taawards/edc-outstanding-ta-awards/}{Outstanding Teaching Assistant Award}
+\item Nominee for the \href{https://carleton.ca/tasupport/taawards/edc-outstanding-ta-awards/}{Outstanding Teaching Assistant Award} in both the 2018/2019 and 2019/2020 academic years.
 \item Assisted the professor in development of course material.
 \item Ran tutorial sessions for groups of 50 students.
 \item Took a leadership role to ensure tutorials proceeded smoothly.
@@ -314,12 +325,12 @@ April 2014 - January 2018 \hfill\emph {Ottawa, ON}
 \item Full source code available at \url{https://github.com/willfindlay/ebph}.
 \end{itemize}
 
-\subsection{Snoopy (eBPF Debugger)}
-\begin{itemize}[itemsep=0em]
-\item System call tracing debugger written in eBPF and Python3.
-\item Competitor to strace, with much higher performance due to lack of reliance on the ptrace system call.
-\item Full source code available at \url{https://github.com/willfindlay/snoopy}.
-\end{itemize}
+%\subsection{Snoopy (eBPF Debugger)}
+%\begin{itemize}[itemsep=0em]
+%\item System call tracing debugger written in eBPF and Python3.
+%\item Competitor to strace, with much higher performance due to lack of reliance on the ptrace system call.
+%\item Full source code available at \url{https://github.com/willfindlay/snoopy}.
+%\end{itemize}
 
 \subsection{bpf-keylogger (eBPF Keylogger Program)}
 \begin{itemize}[itemsep=0em]
@@ -348,11 +359,11 @@ Java, Javascript
 
 \subsubsection{1,000 - 5,000 lines}
 
-Haskell, Prolog, Vimscript, R, Common Lisp
+Vimscript, R, Rust, Golang
 
 \subsection{Markup}
 
-Markdown, Rmarkdown, \LaTeX, HTML, CSS
+\LaTeX, HTML, CSS, Markdown
 
 \subsection{Human}
 
@@ -390,7 +401,7 @@ Git, GitHub
 \begin{itemize}[itemsep=0em]
 \item Linux kernel development
 \item Low level systems programming
-\item Python scripting
+\item Python scripting, Golang
 \item Technical writing and documentation
 \end{itemize}
 
