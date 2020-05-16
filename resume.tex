@@ -1,0 +1,262 @@
+% Preamble ================================================================ {{{
+
+\documentclass[
+    10pt,
+]
+{article}
+
+% Title and subtitle
+\title{R\'esum\'e}
+
+% Author name
+\author{William Findlay}
+
+%\usepackage[none]{hyphenat}
+
+\usepackage{xcolor}
+\definecolor{gray}{HTML}{404040}
+\definecolor{black}{HTML}{000000}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks, allcolors=., urlcolor=blue}
+
+% fancy headers/footers
+\usepackage[bottom]{footmisc}
+\usepackage{fancyhdr}
+\lhead{}
+\chead{}
+\rhead{\vspace{1em}\color{gray}Last Updated: \today}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0pt}
+
+\usepackage{geometry}
+\newgeometry{left=0.6in,top=0.75in,bottom=1in,right=0.6in}
+
+\usepackage[explicit]{titlesec}
+\titleformat{\section}
+{\color{black}\Large\scshape}
+{}
+{0em}
+{#1}[{\color{gray}\hrule}]
+
+\titleformat{\subsection}
+{\color{black}\bfseries}
+{}
+{0em}
+{#1}
+
+\titleformat{\subsubsection}
+{\color{black}}
+{}
+{0em}
+{#1}[]
+
+\titlespacing{\section}
+{0em}{1em}{0.5em}
+
+\titlespacing{\subsection}
+{0em}{0.5em}{0em}
+
+\titlespacing{\subsubsection}
+{0em}{0.5em}{0em}
+
+\renewcommand{\maketitle}{\relax}
+
+\usepackage{enumitem}
+\setitemize{itemsep=0em}
+
+\newcommand{\sep}{
+{\color{black}$\bullet$}
+}
+
+% ========================================================================= }}}
+
+\begin{document}
+
+% Main Document =========================================================== {{{
+
+\pagestyle{fancy}
+
+\begin{figure}
+\small
+\begin{minipage}[t]{0.65\textwidth}
+\begin{center}
+{\Huge\bfseries William Findlay}
+
+\color{gray}
+
+\href{https://www.github.com/willfindlay}{\color{gray}github.com/willfindlay} $\bullet$ \href{http://www.williamfindlay.com}{\color{gray}williamfindlay.com}\\
+{\color{gray}(613) 296-1240} $\bullet$ \href{mailto:william@williamfindlay.com}{\color{gray}william@williamfindlay.com}
+\end{center}
+
+\color{gray}
+
+\section{Education}
+\color{black}
+\textbf{Master of Computer Science} \hfill \emph{Carleton University}\\
+{September 2020 - April 2021} \hfill\emph {Ottawa, ON}
+\color{gray}
+
+Accelerated Master's Program\\
+CGPA: 12.00 (A+) (\textit{Course work completed during bachelor's degree})
+
+\vskip 0.5em
+
+\color{black}
+\textbf{Bachelor of Computer Science} \hfill \emph{Carleton University}\\
+{September 2015 - April 2020} \hfill\emph {Ottawa, ON}
+\color{gray}
+
+Computer and Network Security Stream\\
+Accelerated Master's Program\\
+CGPA: 11.05 (A)
+
+\section{Work Experience}
+
+\color{black}
+\textbf{Research Assistant} (Linux OS Security) \hfill \emph{Carleton University}\\
+April 2019 - Present \hfill\emph {Ottawa, ON}
+\color{gray}
+\begin{itemize}[itemsep=0em]
+    \item Researching the viability of eBPF-based implementations for intrusion
+        detection and confinement under GNU/Linux.
+    \item Designed and implemented ebpH, an intrusion detection system based
+        entirely on eBPF system introspection.
+    \item This research was the subject of my 2019/2020 honors thesis.
+        You can read my thesis at \url{https://williamfindlay.com/written/thesis.pdf}.
+\end{itemize}
+
+\color{black}
+\textbf{Teaching Assistant} (COMP3000 Operating Systems) \hfill \emph{Carleton University}\\
+September 2018 - Present \hfill\emph {Ottawa, ON}
+\color{gray}
+\begin{itemize}[itemsep=0em]
+    \item Nominee for the \href{https://carleton.ca/tasupport/taawards/edc-outstanding-ta-awards/}
+        {Outstanding Teaching Assistant Award} in both the 2018/2019 and 2019/2020 academic years.
+    \item Assisted the professor in development of course material.
+    \item Ran tutorial sessions for groups of 50 students.
+    \item Took a leadership role to ensure tutorials proceeded smoothly.
+    \item Held weekly office hours and workshops for students.
+    \item Graded assignments and tests and gave appropriate feedback.
+\end{itemize}
+
+\color{black}
+\textbf{Service Department Supervisor} \hfill \emph{Metro Ontario, Inc.}\\
+April 2014 - January 2018 \hfill\emph {Ottawa, ON}
+\color{gray}
+\begin{itemize}[itemsep=0em]
+    \item Managed day-to-day operations in the front end service department.
+    \item In charge of store payroll and accounting on a part-time basis.
+    \item Exhibited superior customer service skills as required.
+\end{itemize}
+
+\section{Projects \normalfont \small (See more on \href{https://www.github.com/willfindlay}{GitHub})}
+
+\color{black}
+\textbf{ebpH (eBPF Intrusion Detection System)}
+\color{gray}
+\begin{itemize}[itemsep=0em]
+    \item An intrusion detection system for Linux written entirely in eBPF and Python3.
+    \item Establishes per-executable system call profiles in order to establish normal behavior and detect anomalies.
+    \item Full source code available: \url{https://github.com/willfindlay/ebph}
+\end{itemize}
+
+\color{black}
+\textbf{bpf-keylogger (eBPF Keylogger Program)}
+\color{gray}
+\begin{itemize}[itemsep=0em]
+    \item Fully functional keylogger for GNU/Linux written in eBPF and Python3.
+    \item Full source code available: \url{https://github.com/willfindlay/bpf-keylogger}
+\end{itemize}
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.32\textwidth}
+\color{gray}
+\ %
+\vspace{-3.75em}
+
+\section{Languages}
+
+\subsection{Programming}
+
+\subsubsection{10,000 or more lines}
+
+C, C++, Python
+
+\subsubsection{5,000 - 10,000 lines}
+
+Java, Javascript
+
+\subsubsection{1,000 - 5,000 lines}
+
+Vimscript, R, Rust, Golang
+
+\subsection{Markup}
+
+\LaTeX, HTML, CSS, Markdown
+
+\subsection{Human}
+
+English, French
+
+\section{Workflow}
+
+\subsection{Operating System}
+GNU/Linux (Arch Linux)
+
+\subsection{Window Manager}
+i3wm
+
+\subsection{Shell}
+Zsh
+
+\subsection{Text Editor}
+Vim
+
+\subsection{Version Control}
+Git, GitHub
+
+\section{Technologies}
+\vspace{0.5em}
+\subsection{Kernel Development}
+eBPF, XDP, bcc
+\subsection{Application Development}
+flask, node.js, Qt
+\subsection{Data Science}
+numpy, scipy, pandas, R
+
+\section{Skills}
+\vspace{0.5em}
+\subsection{Technical}
+\begin{itemize}[itemsep=0em]
+    \item Linux kernel development
+    \item Low level systems programming in C, C++, and Rust
+    \item Python scripting
+    \item Technical writing and documentation
+\end{itemize}
+\subsection{General}
+\begin{itemize}[itemsep=0em]
+    \item Research
+    \item Communication
+    \item Team leadership
+\end{itemize}
+
+\end{minipage}
+\end{figure}
+
+
+
+
+
+
+
+
+
+% ========================================================================= }}}
+
+\end{document}
+
+% vim:syn=tex
